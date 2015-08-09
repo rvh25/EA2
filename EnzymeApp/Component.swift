@@ -10,40 +10,14 @@ import SpriteKit
 
 enum ComponentType: Int, CustomStringConvertible{
     
-    //case Unknown = 0, Activator, Competitive_Inhibitor, Deactivator, Enzyme, Noncompetitive_Inhibitor, Substrate
-
+   /* case Unknown = 0,  Enzyme, Substrate, Activator, Competitive_Inhibitor, Deactivator, Noncompetitive_Inhibitor, Enzyme_with_2_activators_and_substrate, Enzyme_with_Competitive_Inhibitor, Enzyme_with_deactivator, Enzyme_with_Noncompetitive_Inhibitor_and_substrate, Enzyme_with_Noncompetitive_Inhibitor, Enzyme_with_one_activator_and_substrate, Enzyme_with_one_activator, Enzyme_with_two_activators, ESComplex, Product*/
     
-    /*case Unknown = 0, Activator, Competitive_Inhibitor, Deactivator, Enzyme, Noncompetitive_Inhibitor, Substrate, Enzyme_with_2_activators_and_substrate, Enzyme_with_Competitive_Inhibitor, Enzyme_with_deactivator, Enzyme_with_Noncompetitive_Inhibitor_and_substrate, Enzyme_with_Noncompetitive_Inhibitor, Enzyme_with_one_activator_and_substrate, Enzyme_with_one_activator, Enzyme_with_two_activators,  ESComplex,  Product*/
-    
-    case Unknown = 0,  Enzyme, Substrate,Activator, Competitive_Inhibitor, Deactivator, Noncompetitive_Inhibitor,  Enzyme_with_2_activators_and_substrate, Enzyme_with_Competitive_Inhibitor, Enzyme_with_deactivator, Enzyme_with_Noncompetitive_Inhibitor_and_substrate, Enzyme_with_Noncompetitive_Inhibitor, Enzyme_with_one_activator_and_substrate, Enzyme_with_one_activator, Enzyme_with_two_activators,  ESComplex,  Product
-    
-/*
-    case Unknown = 0, Activator, Competitive_Inhibitor, Deactivator, Enzyme_with_2_activators_and_substrate, Enzyme_with_Competitive_Inhibitor, Enzyme_with_deactivator, Enzyme_with_Noncompetitive_Inhibitor_and_substrate, Enzyme_with_Noncompetitive_Inhibitor, Enzyme_with_one_activator_and_substrate, Enzyme_with_one_activator, Enzyme_with_two_activators, Enzyme, ESComplex, Noncompetitive_Inhibitor, Product, Substrate
-*/
+    case Unknown = 0, Enzyme,   Substrate, Noncompetitive_Inhibitor, Competitive_Inhibitor, Deactivator, Activator, Enzyme_with_2_activators_and_substrate, Enzyme_with_Competitive_Inhibitor, Enzyme_with_deactivator, Enzyme_with_Noncompetitive_Inhibitor_and_substrate, Enzyme_with_Noncompetitive_Inhibitor, Enzyme_with_one_activator_and_substrate, Enzyme_with_one_activator, Enzyme_with_two_activators, ESComplex, Product
     
     var spriteName: String {
         let spriteNames = [
-        
-            /*"Activator",
-            "Competitive_Inhibitor",
-            "Deactivator",
-            "Enzyme",
-            "Noncompetitive_Inhibitor",
-            "Substrate",
-            "Enzyme_with_2_activators_and_substrate",
-            "Enzyme_with_Competitive_Inhibitor",
-            "Enzyme_with_deactivator",
-            "Enzyme_with_Noncompetitive_Inhibitor_and_substrate",
-            "Enzyme_with_Noncompetitive_Inhibitor",
-            "Enzyme_with_one_activator_and_substrate",
-            "Enzyme_with_one_activator",
-            "Enzyme_with_two_activators",
-            "ESComplex",
-            "Product"
-        ]*/
-        
-        
-        "Enzyme",
+     
+       /* "Enzyme",
         "Substrate",
         "Activator",
         "Competitive_Inhibitor",
@@ -59,56 +33,46 @@ enum ComponentType: Int, CustomStringConvertible{
         "Enzyme_with_two_activators",
         "ESComplex",
         "Product"
-        ]
+        ]*/
         
-        
-            /*"Activator",
+            "Enzyme",
+            "Substrate",
+            "Noncompetitive_Inhibitor",
             "Competitive_Inhibitor",
             "Deactivator",
-            "Enzyme",
-            "Noncompetitive_Inhibitor",
-            "Substrate"
-        ]*/
-
-/*
-     "Activator",
-        "Competitive_Inhibitor",
-        "Deactivator",
-        "Enzyme_with_2_activators_and_substrate",
-        "Enzyme_with_Competitive_Inhibitor",
-        "Enzyme_with_deactivator",
-        "Enzyme_with_Noncompetitive_Inhibitor_and_substrate",
-        "Enzyme_with_Noncompetitive_Inhibitor",
-        "Enzyme_with_one_activator_and_substrate",
-        "Enzyme_with_one_activator",
-        "Enzyme_with_two_activators",
-        "Enzyme",
-        "ESComplex",
-        "Noncompetitive_Inhibitor",
-        "Product",
-        "Substrate"
+            "Activator",
+            //"Substrate",
+            //"Activator",
+            //"Competitive_Inhibitor",
+            //"Deactivator",
+            //"Noncompetitive_Inhibitor",
+            "Enzyme_with_2_activators_and_substrate",
+            "Enzyme_with_Competitive_Inhibitor",
+            "Enzyme_with_deactivator",
+            "Enzyme_with_Noncompetitive_Inhibitor_and_substrate",
+            "Enzyme_with_Noncompetitive_Inhibitor",
+            "Enzyme_with_one_activator_and_substrate",
+            "Enzyme_with_one_activator",
+            "Enzyme_with_two_activators",
+            "ESComplex",
+            "Product"
         ]
-*/
-
+        
         
         return spriteNames[rawValue - 1]
     }
     
     static func random() -> ComponentType {
-        return ComponentType(rawValue: Int(arc4random_uniform(2)) + 1)!
+        //return ComponentType(rawValue: Int(arc4random_uniform(2)) + 1)!
+        return ComponentType(rawValue: Int(arc4random_uniform(3)) + 1)!
+
         //return ComponentType(rawValue: Int(arc4random_uniform(6)) + 1)!
-        //return ComponentType(rawValue: Int(arc4random_uniform(16)) + 1)!
     }
     
     var description: String {
         return spriteName
     }
 }
-
-//    var highlightedSpriteName: String {
-//        return spriteName + "-Highlighted"
-//    }
-    
 
 
 class Component: CustomStringConvertible, Hashable {

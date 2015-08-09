@@ -17,7 +17,6 @@
 		840BB4F21A9A5BC700BC2A6D /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 840BB4F11A9A5BC700BC2A6D /* Sprites.atlas */; };
 		840BB4F41A9A60F300BC2A6D /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BB4F31A9A60F300BC2A6D /* Component.swift */; };
 		840BB4F81A9B7E9000BC2A6D /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BB4F71A9B7E9000BC2A6D /* Array2D.swift */; };
-		840BB4FA1A9B809C00BC2A6D /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BB4F91A9B809C00BC2A6D /* Set.swift */; };
 		840BB4FC1A9B835D00BC2A6D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BB4FB1A9B835D00BC2A6D /* Level.swift */; };
 		840BB4FE1AC205C600BC2A6D /* Swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BB4FD1AC205C600BC2A6D /* Swap.swift */; };
 		849129741AF9779D000ABFCF /* Rxn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849129731AF9779D000ABFCF /* Rxn.swift */; };
@@ -48,7 +47,6 @@
 		840BB4F11A9A5BC700BC2A6D /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		840BB4F31A9A60F300BC2A6D /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		840BB4F71A9B7E9000BC2A6D /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
-		840BB4F91A9B809C00BC2A6D /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		840BB4FB1A9B835D00BC2A6D /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		840BB4FD1AC205C600BC2A6D /* Swap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swap.swift; sourceTree = "<group>"; };
 		849129731AF9779D000ABFCF /* Rxn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rxn.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				840BB4F71A9B7E9000BC2A6D /* Array2D.swift */,
-				840BB4F91A9B809C00BC2A6D /* Set.swift */,
 				840BB4FB1A9B835D00BC2A6D /* Level.swift */,
 				840BB4CA1A9A5A9A00BC2A6D /* EnzymeApp */,
 				840BB4E41A9A5A9A00BC2A6D /* EnzymeAppTests */,
@@ -98,8 +95,8 @@
 			children = (
 				840BB4CD1A9A5A9A00BC2A6D /* AppDelegate.swift */,
 				840BB4D11A9A5A9A00BC2A6D /* GameScene.swift */,
-				849129731AF9779D000ABFCF /* Rxn.swift */,
 				840BB4D31A9A5A9A00BC2A6D /* GameViewController.swift */,
+				849129731AF9779D000ABFCF /* Rxn.swift */,
 				840BB4D51A9A5A9A00BC2A6D /* Main.storyboard */,
 				840BB4D81A9A5A9A00BC2A6D /* Images.xcassets */,
 				840BB4F31A9A60F300BC2A6D /* Component.swift */,
@@ -186,6 +183,7 @@
 				TargetAttributes = {
 					840BB4C71A9A5A9A00BC2A6D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = F5DC67J8SL;
 					};
 					840BB4E01A9A5A9A00BC2A6D = {
 						CreatedOnToolsVersion = 6.2;
@@ -243,7 +241,6 @@
 				840BB4D21A9A5A9A00BC2A6D /* GameScene.swift in Sources */,
 				840BB4FC1A9B835D00BC2A6D /* Level.swift in Sources */,
 				840BB4D41A9A5A9A00BC2A6D /* GameViewController.swift in Sources */,
-				840BB4FA1A9B809C00BC2A6D /* Set.swift in Sources */,
 				840BB4CE1A9A5A9A00BC2A6D /* AppDelegate.swift in Sources */,
 				840BB4F41A9A60F300BC2A6D /* Component.swift in Sources */,
 				840BB4F81A9B7E9000BC2A6D /* Array2D.swift in Sources */,
@@ -372,10 +369,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EnzymeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "VL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -383,10 +383,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EnzymeApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "VL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
